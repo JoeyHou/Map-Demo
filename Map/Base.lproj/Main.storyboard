@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MKD-mB-eGu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hawaii-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Map" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gBP-lY-a32">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="G3h-2l-5KY"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gBP-lY-a32" secondAttribute="bottom" id="0Yb-Mc-6fo"/>
+                            <constraint firstItem="gBP-lY-a32" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7yh-H5-bDe"/>
+                            <constraint firstAttribute="trailing" secondItem="gBP-lY-a32" secondAttribute="trailing" id="9SB-fv-3Rc"/>
+                            <constraint firstAttribute="bottom" secondItem="gBP-lY-a32" secondAttribute="bottom" id="HmP-G1-Yjk"/>
+                            <constraint firstItem="gBP-lY-a32" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="MfH-L3-S0Q"/>
+                            <constraint firstItem="gBP-lY-a32" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="XDs-ok-LTI"/>
+                            <constraint firstAttribute="trailing" secondItem="gBP-lY-a32" secondAttribute="trailing" id="ddc-HP-JbD"/>
+                            <constraint firstItem="gBP-lY-a32" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zIL-VS-Gd9"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Hawaii" id="1kd-fX-gaP">
+                        <leftBarButtonItems>
+                            <barButtonItem title="Play" width="50" id="Qqe-Nj-Fom">
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" id="Er2-GZ-ovX"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Stop" width="50" id="Ak8-Yf-TM3">
+                                <connections>
+                                    <action selector="stop:" destination="BYZ-38-t0r" id="Bux-BF-ThY"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Next" width="50" id="nAm-Mh-R8T">
+                                <connections>
+                                    <action selector="next:" destination="BYZ-38-t0r" id="J0k-Vj-a33"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Back" width="50" id="K7e-ZU-H55">
+                                <connections>
+                                    <action selector="back:" destination="BYZ-38-t0r" id="okZ-9N-EEC"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="gBP-lY-a32" id="mPD-56-vhw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="136.28185907046478"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mFB-jA-XCN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MKD-mB-eGu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="an4-Nl-QfM">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="N6P-pW-H8z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TSv-jM-9Fp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="136.28185907046478"/>
+        </scene>
+    </scenes>
+</document>
